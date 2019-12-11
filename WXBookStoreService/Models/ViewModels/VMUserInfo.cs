@@ -15,6 +15,8 @@ namespace WXBookStoreService.Models.ViewModels
         public string Province { get; set; }
         public string Country { get; set; }
         public string AvatarUrl { get; set; }
+        public decimal Balance { get; set; }
+        
 
         public static VMUserInfo GetVMUserInfo(UserInfo userInfo)
         {
@@ -27,6 +29,7 @@ namespace WXBookStoreService.Models.ViewModels
                 Province = userInfo.Province,
                 Country = userInfo.Country,
                 AvatarUrl = userInfo.AvatarUrl,
+                Balance = userInfo.Balance
             };
         }
     }

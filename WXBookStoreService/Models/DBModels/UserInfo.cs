@@ -26,5 +26,9 @@ namespace WXBookStoreService.Models.DBModels
         public string AvatarUrl { get; set; }
         public string AppId { get; set; }
         public int TimeStamp { get; set; }
+        public decimal Balance { get; set; }
+
+        public ICollection<Order> Orders { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }

@@ -23,6 +23,10 @@ namespace WXBookStoreService.Models.DBModels.Mapping
             Property(p => p.AvatarUrl);
             Property(p => p.AppId);
             Property(p => p.TimeStamp);
+            Property(p => p.Balance);
+
+            HasMany(p => p.Orders).WithOptional(p => p.UserInfo).HasForeignKey(p => p.UserId);
+            HasMany(p => p.Comments).WithOptional(p => p.UserInfo).HasForeignKey(p => p.UserId);
 
             ToTable("UserInfo");
         }

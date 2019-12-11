@@ -62,6 +62,7 @@ namespace WXBookStoreService.Controllers
                     userInfo.AvatarUrl = wxUserInfo.avatarUrl;
                     userInfo.AppId = wxUserInfo.watermark.appid;
                     userInfo.TimeStamp = wxUserInfo.watermark.timestamp;
+                    userInfo.Balance = 299m;
                     dbContext.UserInfos.Add(userInfo);
                 }
                 else

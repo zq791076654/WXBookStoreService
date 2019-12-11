@@ -11,5 +11,9 @@ namespace WXBookStoreService.Models.DBModels
         public string Name { get; set; }
         public string Author { get; set; }
         public decimal Price { get; set; }
+        public string CoverUrl { get; set; }
+
+        public ICollection<Order> Orders { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }

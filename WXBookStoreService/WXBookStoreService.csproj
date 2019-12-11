@@ -118,6 +118,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="images\HAHAHA.jpg" />
+    <Content Include="images\JYZHD.jpg" />
+    <Content Include="images\PYTHON.jpg" />
+    <Content Include="images\SRLJCS.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -130,10 +134,24 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\HttpHelper.cs" />
+    <Compile Include="Migrations\201912110643192_InitialCreate.cs" />
+    <Compile Include="Migrations\201912110643192_InitialCreate.Designer.cs">
+      <DependentUpon>201912110643192_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912110953097_addComment.cs" />
+    <Compile Include="Migrations\201912110953097_addComment.Designer.cs">
+      <DependentUpon>201912110953097_addComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DBModels\Comment.cs" />
     <Compile Include="Models\DBModels\Book.cs" />
     <Compile Include="Models\DBModels\BSContext.cs" />
     <Compile Include="Models\DBModels\Mapping\BookMap.cs" />
+    <Compile Include="Models\DBModels\Mapping\CommentMap.cs" />
+    <Compile Include="Models\DBModels\Mapping\OrderMap.cs" />
     <Compile Include="Models\DBModels\Mapping\UserInfoMap.cs" />
+    <Compile Include="Models\DBModels\Order.cs" />
+    <Compile Include="Models\ViewModels\VMComment.cs" />
     <Compile Include="Models\ViewModels\VMUserInfo.cs" />
     <Compile Include="Models\WXAPIModels\WXOpenId.cs" />
     <Compile Include="Models\DBModels\UserInfo.cs" />
@@ -155,6 +173,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912110643192_InitialCreate.resx">
+      <DependentUpon>201912110643192_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912110953097_addComment.resx">
+      <DependentUpon>201912110953097_addComment.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

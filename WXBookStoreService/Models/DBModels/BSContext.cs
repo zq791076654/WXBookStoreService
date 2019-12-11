@@ -15,11 +15,15 @@ namespace WXBookStoreService.Models.DBModels
 
         public DbSet<Book> Books { get; set; }
         public DbSet<UserInfo> UserInfos { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new BookMap());
             modelBuilder.Configurations.Add(new UserInfoMap());
+            modelBuilder.Configurations.Add(new OrderMap());
+            modelBuilder.Configurations.Add(new CommentMap());
         }
     }
 }
