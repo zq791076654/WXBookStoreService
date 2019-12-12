@@ -11,7 +11,7 @@ namespace WXBookStoreService.Models.ViewModels
         public string UserAvatarUrl { get; set; }
         public string UserNickName { get; set; }
         public string Content { get; set; }
-        public DateTime CommentTime { get; set; }
+        public string CommentTime { get; set; }
 
     }
 }
